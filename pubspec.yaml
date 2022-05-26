@@ -21,7 +21,7 @@ dependencies:
 
   # store image
   path_provider: ^2.0.1
-  grouped_checkbox: 1.0.0
+
 
 dev_dependencies:
   flutter_test:

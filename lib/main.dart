@@ -1,7 +1,7 @@
 import 'package:animated_theme_switcher/animated_theme_switcher.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:user_profile_shared_preferences_example/page/edit_profile_page.dart';
+//import 'package:user_profile_shared_preferences_example/page/edit_profile_page.dart';
 import 'package:user_profile_shared_preferences_example/page/profile_page.dart';
 import 'package:user_profile_shared_preferences_example/themes.dart';
 import 'package:user_profile_shared_preferences_example/utils/user_preferences.dart';
@@ -32,7 +32,7 @@ class MyApp extends StatelessWidget {
           debugShowCheckedModeBanner: false,
           theme: ThemeProvider.of(context),
           title: title,
-          home: EditProfilePage(title: title)
+          home: ProfilePage()
         ),
       ),
     );

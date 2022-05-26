@@ -10,7 +10,7 @@ import 'package:user_profile_shared_preferences_example/widget/button_widget.dar
 import 'package:user_profile_shared_preferences_example/widget/profile_widget.dart';
 import 'package:user_profile_shared_preferences_example/widget/textfield_widget.dart';
 import 'package:path/path.dart';
-import 'package:grouped_checkbox/grouped_checkbox.dart';
+
 import 'package:user_profile_shared_preferences_example/model/notification_setting.dart';
 
 class EditProfilePage extends StatefulWidget {
@@ -106,7 +106,7 @@ class _EditProfilePageState extends State<EditProfilePage> {
                 buildToggleCheckbox(allDiseases),
                 Divider(),
                 ...diseases.map(buildSingleCheckbox).toList(),
-
+                const SizedBox(height: 24),
                 ButtonWidget(
                   text: 'Save',
                   onClicked: () {
@@ -114,6 +114,7 @@ class _EditProfilePageState extends State<EditProfilePage> {
                     Navigator.of(context).pop();
                   },
                 ),
+                const SizedBox(height: 24),
               ],
             ),
           ),

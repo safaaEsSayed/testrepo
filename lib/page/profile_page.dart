@@ -4,7 +4,7 @@ import 'package:user_profile_shared_preferences_example/model/user.dart';
 import 'package:user_profile_shared_preferences_example/page/edit_profile_page.dart';
 import 'package:user_profile_shared_preferences_example/utils/user_preferences.dart';
 import 'package:user_profile_shared_preferences_example/widget/appbar_widget.dart';
-
+import 'package:user_profile_shared_preferences_example/widget/button_widget.dart';
 import 'package:user_profile_shared_preferences_example/widget/profile_widget.dart';
 
 class ProfilePage extends StatefulWidget {
@@ -29,7 +29,7 @@ class _ProfilePageState extends State<ProfilePage> {
                 imagePath: user.imagePath,
                 onClicked: () async {
                   await Navigator.of(context).push(
-                    MaterialPageRoute(builder: (context) => EditProfilePage()),
+                    MaterialPageRoute(builder: (context) => EditProfilePage(title: "title")),
                   );
                   setState(() {});
                 },
@@ -42,6 +42,16 @@ class _ProfilePageState extends State<ProfilePage> {
               buildPhoneNumber(user),
               const SizedBox(height: 48),
               buildAbout(user),
+              const SizedBox(height: 24),
+              ButtonWidget(
+                text: 'Edit',
+                onClicked: () async {
+                  await Navigator.of(context).push(
+                      MaterialPageRoute(builder: (context) => EditProfilePage(title: "title")),
+                  );
+                  setState(() {});
+                },
+              ),
             ],
           ),
         ),
