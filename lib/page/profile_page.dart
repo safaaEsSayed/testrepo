@@ -127,4 +127,26 @@ class _ProfilePageState extends State<ProfilePage> {
           ],
         ),
       );
+
+  Widget buildDiseases(User user) => Container(
+    padding: EdgeInsets.symmetric(horizontal: 48),
+    child: Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text(
+          'Diseases',
+          style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+        ),
+        const SizedBox(height: 10),
+        Text(
+          user.title,
+          style: TextStyle(fontSize: 16, height: 1.4),
+        ),
+        // Text(
+        //   user.value,
+        //   style: TextStyle(fontSize: 16, height: 1.4),
+        // ),
+      ],
+    ),
+  );
 }

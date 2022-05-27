@@ -14,8 +14,9 @@ class UserPreferences {
     about:
         'University Student',
     isDarkMode: false,
-    age: '22',
-      phoneNumber:'01211226688'
+    age: '22', phoneNumber:'01211226688',
+    title: 'Cutaneous',
+    value: false,
   );
 
   static Future init() async =>
@@ -31,4 +32,5 @@ class UserPreferences {
     final json = _preferences.getString(_keyUser);
     return json == null ? myUser : User.fromJson(jsonDecode(json));
   }
+
 }
